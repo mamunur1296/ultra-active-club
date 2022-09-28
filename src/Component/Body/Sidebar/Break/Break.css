@@ -1,0 +1,16 @@
+.break-container{
+    margin-top: 40px;
+}
+.breack-times{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.comon-style{
+    background-color: aliceblue;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 50%;
+    text-align: center;
+}
