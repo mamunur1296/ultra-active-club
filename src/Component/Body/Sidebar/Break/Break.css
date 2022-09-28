@@ -7,6 +7,9 @@
     align-items: center;
     gap: 30px;
 }
+.breack-times a{
+    text-decoration: none;
+}
 .comon-style{
     background-color: aliceblue;
     padding: 5px;

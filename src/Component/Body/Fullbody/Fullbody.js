@@ -7,11 +7,28 @@ import './Fullbody.css';
 
 const Fullbody = () => {
     const [cards, setCards] = useState([]);
+    const [card, setCard] = useState([]);
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setCards(data));
     }, []);
+    const HandalCardButton = cards => {
+        const { title, time, age ,id } = cards;
+        const info = {
+            time,
+            age,
+            title,
+            id
+        }
+        const isExjist = card.filter(csrd => card.id === id);
+        if (isExjist) {
+            setCard([...card, info]);
+        } else {
+            setCard(info);
+        }
+    }
+
     return (
         <div className='container'>
             <h4>Select today’s exercise</h4>
@@ -21,13 +38,17 @@ const Fullbody = () => {
                         cards.map(card => <Cardscontainer
                             key={card.id}
                             card={card}
+                            HandalCardButton={HandalCardButton}
                         ></Cardscontainer>)  
                     }
                 </div>
                 <div className="sidebar-container">
                     <Parsonal></Parsonal>
                     <Break></Break>
-                    <Details></Details>
+                    <Details
+                        key={card.id}
+                        card={card}
+                    ></Details>
                 </div>
             </div>
         </div>

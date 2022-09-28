@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cardscontainer.css'
 
-const Cardscontainer = ({ card }) => {
+const Cardscontainer = ({ card ,HandalCardButton }) => {
     const {title ,img,description,time,age } = card;
     return (
         <div>
@@ -14,7 +14,7 @@ const Cardscontainer = ({ card }) => {
                         <p className="card-text">For Age : {age}</p>
                         <p className="card-text">Time required :{time}</p>
                     </div>
-                    <button className='btn btn-primary'>Add to list</button>
+                    <button onClick={()=>HandalCardButton(card)} className='btn btn-primary'>Add to list</button>
                 </div>
             </div>
         </div>
