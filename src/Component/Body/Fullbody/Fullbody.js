@@ -8,13 +8,14 @@ import './Fullbody.css';
 const Fullbody = () => {
     const [cards, setCards] = useState([]);
     const [card, setCard] = useState([]);
+    const[btntext,setBtntext]=useState('10s')
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setCards(data));
     }, []);
     const HandalCardButton = cards => {
-        const { title, time, age ,id } = cards;
+        const { title, time, age, id } = cards;
         const info = {
             time,
             age,
@@ -27,8 +28,13 @@ const Fullbody = () => {
         } else {
             setCard(info);
         }
-    }
-
+    };
+    const handalBtnText = () => {
+        localStorage.setItem('time', JSON.stringify(btntext));
+        const gatTime = JSON.parse(localStorage.getItem('time'));
+        setBtntext(gatTime)
+     
+    };
     return (
         <div className='container'>
             <h4>Select today’s exercise</h4>
@@ -44,10 +50,15 @@ const Fullbody = () => {
                 </div>
                 <div className="sidebar-container">
                     <Parsonal></Parsonal>
-                    <Break></Break>
+                    <Break
+                    btntext={btntext}
+                        setBtntext={setBtntext}
+                        handalBtnText={handalBtnText}
+                    ></Break>
                     <Details
                         key={card.id}
                         card={card}
+                        btntext={btntext}
                     ></Details>
                 </div>
             </div>

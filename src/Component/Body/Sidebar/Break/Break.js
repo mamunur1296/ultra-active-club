@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Break.css'
 
-const Break = () => {
-    const [text, setText] = useState('');
-    console.log(text);
+const Break = ({btntext,handalBtnText}) => {
     return (
         <div className='break-container'>
             <h4>Add A Break</h4> 
             
             <div className="breack-times">
-                <a
-                    onChange={(e) => setText(e.target.value)}
-
-                href="#"><p className='comon-style'>10 <small>s</small></p></a>
+                <button onClick={() => handalBtnText()} className='comon-style'>{btntext}</button>
+                <button onClick={() => handalBtnText()} className='comon-style'>{btntext}</button>
+                <button onClick={() => handalBtnText()} className='comon-style'>{btntext}</button>
+                <button onClick={() => handalBtnText()} className='comon-style'>{btntext}</button>
+                <button onClick={() => handalBtnText()} className='comon-style'>{btntext}</button>
+             
 
             </div>
         </div>
