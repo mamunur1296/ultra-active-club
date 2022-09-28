@@ -1,7 +1,8 @@
 import React from 'react';
 import './Details.css'
 
-const Details = ({ card ,btntext}) => {
+const Details = ({ card, getTime }) => {
+    
     let time = 0;
     for (const updateTime of card) {
         time = time + parseInt(updateTime.time);
@@ -16,7 +17,7 @@ const Details = ({ card ,btntext}) => {
                 </div>
                 <div className="breack-time">
                     <p>Break time</p>
-                    <p> {btntext} minits </p>
+                    <p> {getTime} minits </p>
                 </div>
             </div>
             <button className='btn mt-5 w-100 btn-primary'>Activity Completed</button>

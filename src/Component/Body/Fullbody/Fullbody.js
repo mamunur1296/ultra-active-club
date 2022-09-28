@@ -8,12 +8,18 @@ import './Fullbody.css';
 const Fullbody = () => {
     const [cards, setCards] = useState([]);
     const [card, setCard] = useState([]);
-    const[btntext,setBtntext]=useState('10s')
+    const [btntext, setBtntext] = useState([]);
+    const [text, setText] = useState([]);
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setCards(data));
     }, []);
+    useEffect(() => {
+        fetch('time.json')
+            .then(res => res.json())
+            .then(data => setBtntext(data));
+    },[])
     const HandalCardButton = cards => {
         const { title, time, age, id } = cards;
         const info = {
@@ -29,12 +35,17 @@ const Fullbody = () => {
             setCard(info);
         }
     };
-    const handalBtnText = () => {
-        localStorage.setItem('time', JSON.stringify(btntext));
-        const gatTime = JSON.parse(localStorage.getItem('time'));
-        setBtntext(gatTime)
-     
+    const handalBtnText = btnDatas => {
+        const { id, time } = btnDatas;
+        localStorage.setItem('data', JSON.stringify(time));
+      const  getTime = JSON.parse(localStorage.getItem('data'));
+        
+
+
+      console.log(getTime);
     };
+
+
     return (
         <div className='container'>
             <h4>Select today’s exercise</h4>
@@ -50,15 +61,18 @@ const Fullbody = () => {
                 </div>
                 <div className="sidebar-container">
                     <Parsonal></Parsonal>
-                    <Break
-                    btntext={btntext}
-                        setBtntext={setBtntext}
+
+                   <Break
+                         btntext={btntext}
                         handalBtnText={handalBtnText}
                     ></Break>
+                 
+                   
                     <Details
                         key={card.id}
                         card={card}
-                        btntext={btntext}
+                        
+                       
                     ></Details>
                 </div>
             </div>
