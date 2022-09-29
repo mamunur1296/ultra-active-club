@@ -49,7 +49,7 @@ const Fullbody = () => {
 
     return (
         <div className='container'>
-            <h4>Select today’s exercise</h4>
+            <h4>Select today’s activities</h4>
             <div className='card-container-main'>
                 <div className=" row row-cols-1 row-cols-md-3 my-5 g-4">
                     {

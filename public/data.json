@@ -3,17 +3,17 @@
     "id": "123456",
     "title": "Cycling",
     "img": "https://media.istockphoto.com/photos/cycling-through-the-park-picture-id831550848?s=612x612",
-    "description": "We're sorry but UMIS_Applicant doesn't work properly without JavaScript enabled. Please enable it to continue",
-    "time": "30 m", 
+    "description": "cycling, use of a bicycle for sport, recreation, or transportation....",
+    "time": "45 minutes's", 
     "age": "20-25y"
   },
   {
     "id": "123457",
     "title": "swimming",
     "img": "https://images.unsplash.com/photo-1600965962102-9d260a71890d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    "description": "We're sorry but UMIS_Applicant doesn't work properly without JavaScript enabled. Please enable it to continue",
-    "time": "30 m", 
-    "age": "20-25y"
+    "description": "swimming, in recreation and sports, the propulsion of the body ...",
+    "time": "50 minutes's", 
+    "age": "25-50y"
   },
   {
     "id": "123458",
@@ -44,7 +44,7 @@
     "title": "Wolking",
     "img": "https://media.istockphoto.com/photos/loving-couple-dancing-at-sand-on-sea-beach-at-summer-against-waves-picture-id1210909757?s=612x612",
     "description": "We're sorry but UMIS_Applicant doesn't work properly without JavaScript enabled. Please enable it to continue",
-    "time": "60 minit's", 
+    "time": "60 minutes's", 
     "age": "20-25y"
   }
 ]
