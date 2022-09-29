@@ -9,7 +9,7 @@ const Fullbody = () => {
     const [cards, setCards] = useState([]);
     const [card, setCard] = useState([]);
     const [btntext, setBtntext] = useState([]);
-    const [text, setText] = useState([]);
+    const [text, setText] = useState(0);
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -62,13 +62,10 @@ const Fullbody = () => {
                 </div>
                 <div className="sidebar-container">
                     <Parsonal></Parsonal>
-
                    <Break
                          btntext={btntext}
                         handalBtnText={handalBtnText}
                     ></Break>
-                 
-                   
                     <Details
                         key={card.id}
                         card={card}
