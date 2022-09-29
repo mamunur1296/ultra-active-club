@@ -19,7 +19,12 @@ const Fullbody = () => {
         fetch('time.json')
             .then(res => res.json())
             .then(data => setBtntext(data));
-    },[])
+    }, [])
+    useEffect(() => {
+        const  getText = JSON.parse(localStorage.getItem('data'));
+        setText(getText);
+    }, [text]);
+    
     const HandalCardButton = cards => {
         const { title, time, age, id } = cards;
         const info = {
@@ -36,13 +41,9 @@ const Fullbody = () => {
         }
     };
     const handalBtnText = btnDatas => {
-        const { id, time } = btnDatas;
+        const {time } = btnDatas;
         localStorage.setItem('data', JSON.stringify(time));
-      const  getTime = JSON.parse(localStorage.getItem('data'));
-        
-
-
-      console.log(getTime);
+        window.location.reload()
     };
 
 
@@ -71,7 +72,7 @@ const Fullbody = () => {
                     <Details
                         key={card.id}
                         card={card}
-                        
+                        text={text}
                        
                     ></Details>
                 </div>

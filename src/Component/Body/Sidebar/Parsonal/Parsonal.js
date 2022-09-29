@@ -21,7 +21,7 @@ const Parsonal = () => {
             </div>
             <div className='additional-info'>
                 <div className="weight">
-                    <h2>75 <span>kg</span></h2>
+                    <h2>65<small>kg</small></h2>
                     <p>Weight</p>
                 </div>
                 <div className="height">
@@ -29,7 +29,7 @@ const Parsonal = () => {
                     <p>Height</p>
                 </div>
                 <div className="age">
-                    <h2>25 <span>year</span></h2>
+                    <h2>25 <small>year</small></h2>
                     <p>Age</p>
                 </div>
             </div>

@@ -19,7 +19,7 @@ const Break = ({ btntext, handalBtnText }) => {
     );
 };
 const BtnSection = ({ btn ,handalBtnText}) => {
-    const { id, time } = btn;
+    const { time } = btn;
     return(
         <div >
             <button onClick={() => handalBtnText(btn)} className='comon-style'>{time}</button>
