@@ -14,7 +14,7 @@ const Cardscontainer = ({ card ,HandalCardButton }) => {
                         <p className="card-text">For Age : {age}</p>
                         <p className="card-text">Time required :{time}</p>
                     </div>
-                    <button onClick={()=>HandalCardButton(card)} className='btn btn-primary'>Add to list</button>
+                    <button onClick={()=>HandalCardButton(card)} className='btn color'>Add to list</button>
                 </div>
             </div>
         </div>

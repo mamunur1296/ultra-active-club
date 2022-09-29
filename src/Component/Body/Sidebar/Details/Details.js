@@ -21,7 +21,7 @@ const Details = ({ card, text }) => {
             <div>
                 <div className="exercise-time">
                     <p>Exercise time</p>
-                    <p> {time}minits </p>
+                    <p> {time} minits </p>
                 </div>
                 <div className="breack-time">
                     <p>Break time</p>

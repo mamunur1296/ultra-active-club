@@ -1,6 +1,10 @@
 .text{
     font-size:30px;
+    color: blueviolet;
 }
 .margin{
     margin-top: 60px;
+}
+.cal{
+    color: blueviolet;
 }

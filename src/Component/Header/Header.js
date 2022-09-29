@@ -7,8 +7,8 @@ const Header = () => {
     return (
         <div className='container'>
             <div className='d-flex py-4 margin '>
-                <FontAwesomeIcon className='text-primary text' icon={faPersonWalking}></FontAwesomeIcon>   
-                <h3 className='text-primary ms-2 '>MODERN-EXERCISE-CLUB</h3>
+                <FontAwesomeIcon className=' text' icon={faPersonWalking}></FontAwesomeIcon>   
+                <h3 className='cal ms-2 '>MODERN EXERCISE CLUB</h3>
             </div>
         </div>
     );
